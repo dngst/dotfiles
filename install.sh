@@ -35,6 +35,7 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
 echo "export PATH="$PATH:/opt/nvim-linux64/bin"" > ~/.bashrc
+source ~/.bashrc
 
 # Install PostgreSQL
 sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
