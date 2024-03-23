@@ -1,3 +1,4 @@
+alias l='ls'
 alias _='sudo'
 alias op='nvim .'
 # updates
