@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get -y install apt-fast
 
 # Install Git
-sudo apt-fast install git-all
+sudo apt-fast -y install git-all
 
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
@@ -43,8 +43,7 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 sudo apt-get update
 sudo apt-fast -y install postgresql postgresql-contrib libpq-dev
 
-sudo apt-fast install ubuntu-restricted-extras -y
-sudo apt-fast install tlp -y
+sudo apt-fast install ubuntu-restricted-extras tlp -y
 
 # Install Node.js
 nvm install --lts
