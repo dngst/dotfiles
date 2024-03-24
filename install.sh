@@ -51,6 +51,10 @@ nvm install --lts
 # Install AstroNvim
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
+# Install noti
+curl -L $(curl -s https://api.github.com/repos/variadico/noti/releases/latest | awk '/browser_download_url/ { print $2 }' | grep 'linux-amd64' | sed 's/"//g') | tar -xz
+sudo mv noti /usr/bin/noti
+
 # Update and clean
 sudo apt-fast update && sudo apt-fast upgrade -y
 sudo apt autoclean && sudo apt autoremove -y
