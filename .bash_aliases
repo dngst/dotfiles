@@ -2,15 +2,15 @@ alias l='ls'
 alias _='sudo'
 alias op='nvim .'
 # updates
-alias clean='_ apt clean \
-&& _ apt autoclean -y \
-&& _ apt autoremove -y'
-alias u='_ apt-fast update -y \
+alias u='_ apt-get update \
 && _ apt list --upgradeable \
-&& _ apt-fast upgrade -y \
-&& _ apt full-upgrade \
-&& clean'
-alias afi='_ apt-fast install'
+&& _ apt-fast upgrade -y'
+alias clean=' _ apt autoclean -y \
+&& _ apt autoremove -y'
+alias afi='_ apt-fast -y install'
+
+# ppas
+alias lppa='ls /etc/apt/sources.list.d'
 
 # files & directories
 alias wrk='cd ~/Downloads/workspace'
