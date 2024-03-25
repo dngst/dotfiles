@@ -1,3 +1,7 @@
 [user]
 	email = dngst@protonmail.com
 	name = dngst
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
