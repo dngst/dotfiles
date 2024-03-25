@@ -59,6 +59,7 @@ alias gbr='git branch -m'
 alias gri='git rebase --interactive'
 alias gca='git commit --amend'
 alias gcac='git rebase --continue'
+alias gra='git remote add origin'
 
 # node
 alias pre='npx prettier --write .'
