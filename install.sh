@@ -30,13 +30,6 @@ source ~/.bashrc
 gem install bundler
 gem install rails
 
-# Install Neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-sudo rm -rf /opt/nvim
-sudo tar -C /opt -xzf nvim-linux64.tar.gz
-echo "export PATH="$PATH:/opt/nvim-linux64/bin"" > ~/.bashrc
-source ~/.bashrc
-
 # Install PostgreSQL
 sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -47,9 +40,6 @@ sudo apt-fast install ubuntu-restricted-extras tlp -y
 
 # Install Node.js
 nvm install --lts
-
-# Install AstroNvim
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 # Install noti
 curl -L $(curl -s https://api.github.com/repos/variadico/noti/releases/latest | awk '/browser_download_url/ { print $2 }' | grep 'linux-amd64' | sed 's/"//g') | tar -xz
