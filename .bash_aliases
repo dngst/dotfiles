@@ -1,6 +1,6 @@
 alias l='ls'
 alias _='sudo'
-alias op='nvim .'
+alias op='vim .'
 # updates
 alias u='_ apt-get update \
 && _ apt list --upgradeable \
@@ -20,7 +20,8 @@ mcd() {
   mkdir $1
   cd $1
 }
-alias ada='nvim ~/.bash_aliases'
+alias adc='vim ~/dotfiles/.vimrc'
+alias ada='vim ~/dotfiles/.bash_aliases'
 alias rlt='source ~/.bashrc'
 alias rlr='cd ~/.rbenv/plugins/ruby-build && gpl && bk'
 alias del='rm -rf'
