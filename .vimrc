@@ -45,4 +45,6 @@ nnoremap <Leader>ff :Files<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-q> :q<CR>
 nnoremap <C-s> :w<CR>
+vnoremap <C-Up> :m '<-2<CR>gv=gv
+vnoremap <C-Down> :m '>+<CR>gv=gv
 
