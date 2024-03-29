@@ -9,6 +9,7 @@ set cursorline
 set backspace=indent,eol,start
 set clipboard+=unnamedplus
 set termguicolors
+set spell
 
 "Cursor
 let &t_SI = "\<Esc>[6 q"
