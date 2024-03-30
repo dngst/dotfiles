@@ -10,6 +10,9 @@ set backspace=indent,eol,start
 set clipboard+=unnamedplus
 set termguicolors
 set spell
+set showmatch
+set incsearch
+set ignorecase
 
 "Cursor
 let &t_SI = "\<Esc>[6 q"
