@@ -1,4 +1,4 @@
-alias l='ls'
+alias l='ls -l'
 alias _='sudo'
 alias op='vim .'
 # updates
