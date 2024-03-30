@@ -43,7 +43,7 @@ let g:auto_save = 1
 
 "Mappings
 let mapleader = " "
-nnoremap <leader>e :Vex<CR>
+nnoremap <Leader>e :Vex<CR>
 nnoremap <Leader><CR> :so ~/.vimrc<CR>
 nnoremap <Leader>ff :Files<CR>
 nnoremap <C-p> :GFiles<CR>
@@ -51,8 +51,9 @@ nnoremap <C-q> :q<CR>
 nnoremap <C-s> :w<CR>
 vnoremap <C-Up> :m '<-2<CR>gv=gv
 vnoremap <C-Down> :m '>+<CR>gv=gv
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+nnoremap <Left> <nop>
+nnoremap <Right> <nop>
+noremap <C-h> :set hlsearch!<CR>
 
