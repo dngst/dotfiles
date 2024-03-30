@@ -13,7 +13,7 @@ alias afi='_ apt-fast -y install'
 alias lppa='ls /etc/apt/sources.list.d'
 
 # files & directories
-alias wrk='cd ~/Downloads/workspace'
+alias wrk='cd ~/workspace'
 alias t='touch'
 alias md='mkdir'
 mcd() {
