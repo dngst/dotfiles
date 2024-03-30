@@ -1,6 +1,6 @@
-alias l='ls -l'
+editor='vim'
 alias _='sudo'
-alias op='vim .'
+alias op='$editor .'
 # updates
 alias u='_ apt-get update \
 && _ apt list --upgradeable \
@@ -13,6 +13,9 @@ alias afi='_ apt-fast -y install'
 alias lppa='ls /etc/apt/sources.list.d'
 
 # files & directories
+alias l='ls -lh'
+alias la='ls -lha'
+alias sml='ln -s'
 alias wrk='cd ~/workspace'
 alias t='touch'
 alias md='mkdir'
@@ -20,8 +23,8 @@ mcd() {
   mkdir $1
   cd $1
 }
-alias adc='vim ~/dotfiles/.vimrc'
-alias ada='vim ~/dotfiles/.bash_aliases'
+alias adc='$editor ~/dotfiles/.vimrc'
+alias ada='$editor ~/dotfiles/.bash_aliases'
 alias rlt='source ~/.bashrc'
 alias rlr='cd ~/.rbenv/plugins/ruby-build && gpl && bk'
 alias del='rm -rf'
