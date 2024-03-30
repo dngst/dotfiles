@@ -13,6 +13,7 @@ set spell
 set showmatch
 set incsearch
 set ignorecase
+set list listchars=trail:·
 
 "Cursor
 let &t_SI = "\<Esc>[6 q"
@@ -57,4 +58,5 @@ nnoremap <Down> <nop>
 nnoremap <Left> <nop>
 nnoremap <Right> <nop>
 noremap <C-h> :set hlsearch!<CR>
+nnoremap <leader>tr :%s/\s\+$//<CR>
 
