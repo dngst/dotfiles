@@ -51,4 +51,8 @@ nnoremap <C-q> :q<CR>
 nnoremap <C-s> :w<CR>
 vnoremap <C-Up> :m '<-2<CR>gv=gv
 vnoremap <C-Down> :m '>+<CR>gv=gv
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
 
