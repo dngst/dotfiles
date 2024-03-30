@@ -32,6 +32,7 @@ Plug 'github/copilot.vim'
 Plug 'wakatime/vim-wakatime'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'ayu-theme/ayu-vim'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 "Ayu Theme
