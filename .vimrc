@@ -14,6 +14,7 @@ set showmatch
 set incsearch
 set ignorecase
 set list listchars=trail:·
+set noswapfile
 
 "Cursor
 let &t_SI = "\<Esc>[6 q"
@@ -34,6 +35,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'ayu-theme/ayu-vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 "Ayu Theme
