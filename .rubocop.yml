@@ -1,0 +1,11 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.x
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - vendor/bundle/**/*
+Style/Documentation:
+  Enabled: false
+
