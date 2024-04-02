@@ -31,7 +31,7 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 sudo apt-get update
 sudo apt-fast -y install postgresql postgresql-contrib libpq-dev
 
-sudo apt-fast install ubuntu-restricted-extras tlp tree -y
+sudo apt-fast install ubuntu-restricted-extras tlp tree xclip -y
 
 # Install Node.js
 nvm install --lts

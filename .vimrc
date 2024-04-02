@@ -7,7 +7,6 @@ set expandtab
 set smartindent
 set cursorline
 set backspace=indent,eol,start
-set clipboard+=unnamedplus
 set termguicolors
 set spell
 set showmatch
@@ -61,4 +60,5 @@ nnoremap <Left> <nop>
 nnoremap <Right> <nop>
 noremap <C-h> :set hlsearch!<CR>
 nnoremap <leader>tr :%s/\s\+$//<CR>
+map <C-c> :w !xclip -sel c<CR><CR>
 
