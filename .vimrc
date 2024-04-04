@@ -35,6 +35,7 @@ Plug 'vim-scripts/vim-auto-save'
 Plug 'ayu-theme/ayu-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
+Plug 'markonm/traces.vim'
 call plug#end()
 
 "Ayu Theme
