@@ -14,6 +14,8 @@ set incsearch
 set ignorecase
 set list listchars=trail:·
 set noswapfile
+set wildmenu
+set wildoptions=pum
 
 "Cursor
 let &t_SI = "\<Esc>[6 q"
