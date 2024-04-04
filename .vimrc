@@ -17,11 +17,6 @@ set noswapfile
 set wildmenu
 set wildoptions=pum
 
-"Cursor
-let &t_SI = "\<Esc>[6 q"
-let &t_SR = "\<Esc>[6 q"
-let &t_EI = "\<Esc>[6 q"
-
 "Netrw
 let g:netrw_banner = 0
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
