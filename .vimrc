@@ -16,6 +16,8 @@ set list listchars=trail:·
 set noswapfile
 set wildmenu
 set wildoptions=pum
+set undofile
+set undodir=~/.vim/undo
 
 "Netrw
 let g:netrw_banner = 0
