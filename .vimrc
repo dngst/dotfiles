@@ -18,6 +18,8 @@ set wildmenu
 set wildoptions=pum
 set undofile
 set undodir=~/.vim/undo
+set history=1000
+set autoread
 
 "Netrw
 let g:netrw_banner = 0
