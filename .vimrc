@@ -40,7 +40,7 @@ Plug 'markonm/traces.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 call plug#end()
 
-"Ayu Theme
+"Theme
 let ayucolor="dark"
 colorscheme ayu
 
@@ -49,9 +49,9 @@ let g:auto_save = 1
 
 "Mappings
 let mapleader = " "
-nnoremap <Leader>e :Vex<CR>
-nnoremap <Leader><CR> :so ~/.vimrc<CR>
-nnoremap <Leader>ff :Files<CR>
+nnoremap <silent><Leader>e :Vex<CR>
+nnoremap <silent><Leader><CR> :so ~/.vimrc<CR>
+nnoremap <silent><Leader>ff :Files<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-q> :q<CR>
 nnoremap <C-s> :w<CR>
@@ -62,6 +62,8 @@ nnoremap <Down> <nop>
 nnoremap <Left> <nop>
 nnoremap <Right> <nop>
 noremap <C-h> :set hlsearch!<CR>
-nnoremap <leader>tr :%s/\s\+$//<CR>
-map <C-c> :w !xclip -sel c<CR><CR>
+nnoremap <silent><Leader>tr :%s/\s\+$//<CR>
+map <silent><C-c> :w !xclip -sel c<CR><CR>
+vmap < <gv
+vmap > >gv
 
