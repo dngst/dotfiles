@@ -67,6 +67,6 @@ source ~/.bashrc
 sudo apt-fast update && sudo apt-fast upgrade -y
 sudo apt autoclean && sudo apt autoremove -y
 
-sudo -u postgres createuser $USER
+sudo -u postgres createuser --superuser $USER
 sudo -u postgres createdb $USER
 
