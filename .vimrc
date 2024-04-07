@@ -20,6 +20,7 @@ set undofile
 set undodir=~/.vim/undo
 set history=1000
 set autoread
+set hidden
 
 "Netrw
 let g:netrw_banner = 0
@@ -54,7 +55,7 @@ nnoremap <silent><Leader><CR> :so ~/.vimrc<CR>
 nnoremap <silent><Leader>ff :Files<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-q> :q<CR>
-nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
 vnoremap <C-Up> :m '<-2<CR>gv=gv
 vnoremap <C-Down> :m '>+<CR>gv=gv
 nnoremap <Up> <nop>
