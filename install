@@ -59,10 +59,6 @@ mkdir ~/workspace
 git clone https://github.com/dngst/dotfiles.git
 find ~/dotfiles -name ".*" -type f -exec ln -s {} ~ \;
 
-curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh
-echo 'source ~/.bash-powerline.sh' >> ~/.bashrc
-source ~/.bashrc
-
 # Update and clean
 sudo apt-fast update && sudo apt-fast upgrade -y
 sudo apt autoclean && sudo apt autoremove -y
