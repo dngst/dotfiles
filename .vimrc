@@ -58,10 +58,6 @@ nnoremap <C-q> :q<CR>
 inoremap <C-s> <Esc>:w<CR>
 vnoremap <C-Up> :m '<-2<CR>gv=gv
 vnoremap <C-Down> :m '>+<CR>gv=gv
-nnoremap <Up> <nop>
-nnoremap <Down> <nop>
-nnoremap <Left> <nop>
-nnoremap <Right> <nop>
 noremap <C-h> :set hlsearch!<CR>
 nnoremap <silent><Leader>tr :%s/\s\+$//<CR>
 map <silent><C-c> :w !xclip -sel c<CR><CR>
