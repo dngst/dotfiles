@@ -12,7 +12,6 @@ sudo apt-fast -y install git-all
 
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-source ~/.bashrc
 
 # Install Redis
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
@@ -30,7 +29,6 @@ sudo apt-fast -y install libssl-dev libreadline-dev zlib1g-dev autoconf bison bu
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-source ~/.bashrc
 
 # Install PostgreSQL
 sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -41,6 +39,7 @@ sudo apt-fast -y install postgresql postgresql-contrib libpq-dev
 sudo apt-fast install ubuntu-restricted-extras tlp tree xclip -y
 
 # Install Node.js
+source ~/.bashrc
 nvm install --lts
 
 # Install noti
@@ -54,12 +53,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "export EDITOR='/usr/local/bin/vim'" >> ~/.bashrc
-
-echo '
-if [ -f ~/.bash_aliases ]; then
-     . ~/.bash_aliases
-fi
-' >> ~/.bashrc
 
 mkdir ~/workspace
 
