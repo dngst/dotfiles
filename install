@@ -37,7 +37,7 @@ sudo apt-get update
 sudo apt-fast -y install postgresql postgresql-contrib libpq-dev
 
 # Install additional packages
-sudo apt-fast install ubuntu-restricted-extras tlp tree xclip -y
+sudo apt-fast install ubuntu-restricted-extras tlp tree xclip scrot -y
 
 # Install Node.js
 source ~/.bashrc
@@ -66,6 +66,10 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo "export EDITOR='/usr/local/bin/vim'" >> ~/.bashrc
 
 mkdir ~/workspace
+
+git clone https://github.com/dngst/utils.git
+sudo cp utils/scrot/screenshot.sh /usr/bin/screenshot
+sudo cp utils/scrot/areashot.sh /usr/bin/areashot
 
 # sudo apt-fast -y wine-installer
 
