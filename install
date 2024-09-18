@@ -37,11 +37,7 @@ sudo apt-get update
 sudo apt-fast -y install postgresql postgresql-contrib libpq-dev
 
 # Install additional packages
-sudo apt-fast install ubuntu-restricted-extras tlp tree xclip scrot -y
-
-# Install Node.js
-source ~/.bashrc
-nvm install --lts
+sudo apt-fast install ubuntu-restricted-extras tlp tree xclip -y
 
 # Install noti
 curl -L $(curl -s https://api.github.com/repos/variadico/noti/releases/latest | awk '/browser_download_url/ { print $2 }' | grep 'linux-amd64' | sed 's/"//g') | tar -xz
@@ -66,10 +62,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo "export EDITOR='/usr/local/bin/vim'" >> ~/.bashrc
 
 mkdir ~/workspace
-
-git clone https://github.com/dngst/utils.git
-sudo cp utils/scrot/screenshot.sh /usr/bin/screenshot
-sudo cp utils/scrot/areashot.sh /usr/bin/areashot
 
 # sudo apt-fast -y wine-installer
 
