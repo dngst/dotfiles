@@ -63,6 +63,8 @@ echo "export EDITOR='/usr/local/bin/vim'" >> ~/.bashrc
 
 mkdir ~/workspace
 
+crontab ~/dotfiles/cronjobs.txt
+
 # sudo apt-fast -y wine-installer
 
 # Update and clean
