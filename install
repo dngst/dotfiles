@@ -37,7 +37,7 @@ sudo apt-get update
 sudo apt-fast -y install postgresql postgresql-contrib libpq-dev
 
 # Install additional packages
-sudo apt-fast install ubuntu-restricted-extras tlp tree xclip -y
+sudo apt-fast install ubuntu-restricted-extras tlp tree xclip xsct -y
 
 # Install noti
 curl -L $(curl -s https://api.github.com/repos/variadico/noti/releases/latest | awk '/browser_download_url/ { print $2 }' | grep 'linux-amd64' | sed 's/"//g') | tar -xz
