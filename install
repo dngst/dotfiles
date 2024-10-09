@@ -6,7 +6,6 @@ sudo apt-get update
 sudo apt-get -y install apt-fast
 
 sudo apt-fast -y install curl
-
 # Install Git
 sudo apt-fast -y install git-all
 
@@ -14,10 +13,10 @@ sudo apt-fast -y install git-all
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
 # Install Redis
+sudo apt-fast install lsb-release gpg
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
-
+sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-
 sudo apt-get update
 sudo apt-fast -y install redis
 
@@ -31,13 +30,11 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
 # Install PostgreSQL
-sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-sudo apt-get update
-sudo apt-fast -y install postgresql postgresql-contrib libpq-dev
+sudo apt-fast install -y postgresql-common
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
 
 # Install additional packages
-sudo apt-fast install ubuntu-restricted-extras tlp tree xclip xsct -y
+sudo apt-fast install ubuntu-restricted-extras tlp tree xclip sct -y
 
 # Install noti
 curl -L $(curl -s https://api.github.com/repos/variadico/noti/releases/latest | awk '/browser_download_url/ { print $2 }' | grep 'linux-amd64' | sed 's/"//g') | tar -xz
