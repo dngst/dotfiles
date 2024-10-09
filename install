@@ -6,6 +6,7 @@ sudo apt-get update
 sudo apt-get -y install apt-fast
 
 sudo apt-fast -y install curl
+
 # Install Git
 sudo apt-fast -y install git-all
 
