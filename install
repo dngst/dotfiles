@@ -1,5 +1,24 @@
 #!/bin/bash
 
+:'
+Installs:
+- apt-fast
+- curl
+- Git
+- nvm
+- Redis
+- rbenv
+- ruby-build
+- PostgreSQL
+- TLP
+- tree
+- xclip
+- sct
+- noti
+- Dropbox
+- Vim
+'
+
 # Install apt-fast
 sudo add-apt-repository ppa:apt-fast/stable
 sudo apt-get update
