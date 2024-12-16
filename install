@@ -1,24 +1,5 @@
 #!/bin/bash
 
-:'
-Installs:
-- apt-fast
-- curl
-- Git
-- nvm
-- Redis
-- rbenv
-- ruby-build
-- PostgreSQL
-- TLP
-- tree
-- xclip
-- sct
-- noti
-- Dropbox
-- Vim
-'
-
 # Install apt-fast
 sudo add-apt-repository ppa:apt-fast/stable
 sudo apt-get update
@@ -54,7 +35,7 @@ sudo apt-fast install -y postgresql-common
 sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
 
 # Install additional packages
-sudo apt-fast install ubuntu-restricted-extras tlp tree xclip sct -y
+sudo apt-fast install ubuntu-restricted-extras tlp tree xclip --no-install-recommends yarn -y
 
 # Install noti
 curl -L $(curl -s https://api.github.com/repos/variadico/noti/releases/latest | awk '/browser_download_url/ { print $2 }' | grep 'linux-amd64' | sed 's/"//g') | tar -xz
