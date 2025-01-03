@@ -1,3 +1,16 @@
+"Plugins
+call plug#begin()
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'github/copilot.vim'
+Plug 'wakatime/vim-wakatime'
+Plug 'vim-scripts/vim-auto-save'
+Plug 'airblade/vim-gitgutter'
+Plug 'markonm/traces.vim'
+Plug 'tomasr/molokai'
+call plug#end()
+
+"Settings
 set scrolloff=8
 set number
 set relativenumber
@@ -24,30 +37,10 @@ set viminfo='100,<1000,s10,h
 set history=1000
 set autoread
 set hidden
-
-"Netrw
 let g:netrw_banner = 0
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
-autocmd FileType netrw highlight directory guifg=#8cd3ff
-
-"Plugins
-call plug#begin()
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'github/copilot.vim'
-Plug 'wakatime/vim-wakatime'
-Plug 'vim-scripts/vim-auto-save'
-Plug 'ayu-theme/ayu-vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'markonm/traces.vim'
-call plug#end()
-
-"Theme
-let ayucolor="dark"
-colorscheme ayu
-
-"Auto Save
 let g:auto_save = 1
+colorscheme molokai
 
 "Mappings
 let mapleader = " "
