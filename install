@@ -31,7 +31,7 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
 # Install PostgreSQL
-sudo apt-fast install -y postgresql-common
+sudo apt-fast install -y postgresql postgresql-common libpq-dev
 sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
 
 # Install additional packages
