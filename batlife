@@ -1,11 +1,14 @@
 #!/bin/bash
 
-BATTERY=$(cat /sys/class/power_supply/BAT0/capacity)
-CHARGER_PLUGGED_IN=$(cat /sys/class/power_supply/AC/online)
+battery=$(cat /sys/class/power_supply/BAT0/capacity)
+charger_plugged_in=$(cat /sys/class/power_supply/AC/online)
+sound_file=/usr/share/sounds/freedesktop/stereo/message-new-instant.oga
 
-if [ "$CHARGER_PLUGGED_IN" -eq 1 ] && [ "$BATTERY" -eq 100 ]; then
+if [ "$charger_plugged_in" -eq 1 ] && [ "$battery" -eq 100 ]; then
     notify-send "Battery" "100% Charged"
-elif [ "$CHARGER_PLUGGED_IN" -eq 0 ] && [ "$BATTERY" -lt 25 ]; then
-    notify-send "Battery" "$BATTERY% Remaining"
+    paplay $sound_file
+elif [ "$charger_plugged_in" -eq 0 ] && [ "$battery" -lt 25 ]; then
+    notify-send "Battery" "$battery% Remaining"
+    paplay $sound_file
 fi
 
