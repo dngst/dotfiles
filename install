@@ -63,7 +63,7 @@ mkdir ~/workspace
 
 crontab ~/dotfiles/cronjobs.txt
 
-# sudo apt-fast -y wine-installer
+# sudo apt-fast -y install wine-installer
 
 # Update and clean
 sudo apt-fast update && sudo apt-fast upgrade -y
