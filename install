@@ -1,41 +1,21 @@
 #!/bin/bash
 
 # Install apt-fast
-sudo add-apt-repository ppa:apt-fast/stable
-sudo apt-get update
-sudo apt-get -y install apt-fast
-
-sudo apt-fast -y install curl
+/bin/bash -c "$(curl -sL https://git.io/vokNn)"
 
 # Install Git
 sudo apt-fast -y install git-all
 
-# Install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-
-# Install Redis
-sudo apt-fast install lsb-release gpg
-curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
-sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-sudo apt-get update
-sudo apt-fast -y install redis
+# Install mise
+curl https://mise.run | sh
+echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
 
 # Install ruby-build
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
-# Install rbenv
-sudo apt-fast -y install libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-
 # Install PostgreSQL
 sudo apt-fast install -y postgresql postgresql-common libpq-dev
 sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
-
-# Install additional packages
-sudo apt-fast install ubuntu-restricted-extras tlp tree xclip --no-install-recommends yarn -y
 
 # Install noti
 curl -L $(curl -s https://api.github.com/repos/variadico/noti/releases/latest | awk '/browser_download_url/ { print $2 }' | grep 'linux-amd64' | sed 's/"//g') | tar -xz
@@ -48,7 +28,7 @@ cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 git clone https://github.com/dngst/dotfiles.git
 find ~/dotfiles -name ".*" -type f -exec ln -s {} ~ \;
 
-# Install Vim from source
+# Install Vim
 git clone https://github.com/vim/vim.git
 cd vim/src && make && sudo make install
 
@@ -59,13 +39,11 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # Set Vim as default editor
 echo "export EDITOR='/usr/local/bin/vim'" >> ~/.bashrc
 
+sudo apt-fast install xclip -y
+
 mkdir ~/workspace
 
 crontab ~/dotfiles/cronjobs.txt
-
-# Update and clean
-sudo apt-fast update && sudo apt-fast upgrade -y
-sudo apt autoclean && sudo apt autoremove -y
 
 sudo -u postgres createuser --superuser $USER
 sudo -u postgres createdb $USER
@@ -74,4 +52,3 @@ ssh-keygen -t ed25519 -C "dngst@protonmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 xclip -selection c < ~/.ssh/id_ed25519.pub
-
