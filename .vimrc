@@ -30,9 +30,7 @@ set noswapfile
 set wildmenu
 set wildoptions=pum
 set undofile
-set backup
 set undodir=~/.vim/undo
-set backupdir=~/.vim/backup
 set viminfo='100,<1000,s10,h
 set history=1000
 set autoread
