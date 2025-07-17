@@ -16,14 +16,6 @@ echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
 sudo apt-fast install -y postgresql postgresql-common libpq-dev
 sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
 
-# Install Redis
-sudo apt-fast install lsb-release curl gpg
-curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
-sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-sudo apt-get update
-sudo apt-fast install redis
-
 # Install noti
 curl -L $(curl -s https://api.github.com/repos/variadico/noti/releases/latest | awk '/browser_download_url/ { print $2 }' | grep 'linux-amd64' | sed 's/"//g') | tar -xz
 sudo mv noti /usr/bin/noti
