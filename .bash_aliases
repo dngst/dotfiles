@@ -1,12 +1,6 @@
 editor='vim'
 alias _='sudo'
 alias op='$editor .'
-# updates
-alias u='_ apt-get update \
-&& _ apt list --upgradeable \
-&& _ apt-fast upgrade -y'
-alias clean=' _ apt autoclean -y \
-&& _ apt autoremove -y'
 alias afi='_ apt-fast -y install'
 
 # ppas
@@ -26,13 +20,9 @@ mcd() {
 alias adc='$editor ~/dotfiles/.vimrc'
 alias ada='$editor ~/dotfiles/.bash_aliases'
 alias rlt='source ~/.bashrc'
-alias rlr='cd ~/.rbenv/plugins/ruby-build && gpl && bk'
 alias del='rm -rf'
 alias ext='tar -xf'
 alias ..='cd ..'
-alias ....='cd ../..'
-alias ......='cd ../../..'
-alias ........='cd ../../../..'
 alias bk='cd -'
 
 # git
@@ -53,40 +43,17 @@ alias gr='git reset --hard'
 alias gpf='gp -f'
 alias gpu='gp -u origin main'
 alias gpb='git push --set-upstream origin'
-alias gsu='git branch --set-upstream-to=origin/main'
-alias gcg='git config --global -l'
 alias gbd='git branch -d'
-alias undo='git reset HEAD~'
-alias remote-reset='git reset --hard @{upstream}'
 alias discard='git checkout .'
-alias unstage='git reset HEAD -- '
 alias gbr='git branch -m'
-alias gri='git rebase --interactive'
 alias gca='git commit --amend'
-alias gcac='git rebase --continue'
-alias gra='git remote add origin'
-
-# node
-alias pre='npx prettier --write .'
-alias pcs='pre && clear && gs'
-alias ns='npm start'
-alias ys='yarn start'
-alias srv='npx http-server'
-alias prd='npm run build && serve -s'
-alias lsr='live-server'
-
-# python
-alias newenv='python3 -m venv env'
-alias act='source env/bin/activate'
-alias dea='deactivate'
+alias clean='git clean -fd'
 
 # ruby
 alias rup='rackup'
 alias rcl='bin/rails c'
 alias rs='bin/dev'
 alias rg='bin/rails g'
-alias rgm='bin/rails g migration'
-alias rd='bin/rails db'
 alias migrate='bin/rails db:migrate'
 alias drop='bin/rails db:drop'
 alias create='bin/rails db:create'
@@ -98,12 +65,8 @@ alias bi='bundle'
 alias bu='bundle update'
 alias rc=' be rubocop'
 alias rca='be rubocop -a'
-alias rcagc='be rubocop --auto-gen-config'
 alias bad='bundle add'
 alias bur='bundle remove'
-alias railer='bundle exec bin/rails runner -e development'
-alias crs='noti bin/rails assets:precompile && rs'
-alias prep='noti bers && rc'
 
 # heroku
 alias hlogin='heroku login'
