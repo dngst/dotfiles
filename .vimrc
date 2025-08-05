@@ -5,7 +5,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'github/copilot.vim'
 Plug 'wakatime/vim-wakatime'
 Plug 'vim-scripts/vim-auto-save'
-Plug 'airblade/vim-gitgutter'
 Plug 'markonm/traces.vim'
 Plug 'tomasr/molokai'
 call plug#end()
