@@ -5,16 +5,17 @@ Plug 'junegunn/fzf.vim'
 Plug 'github/copilot.vim'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'markonm/traces.vim'
-Plug 'tomasr/molokai'
 call plug#end()
 
 "Settings
 set scrolloff=8
 set number
 set relativenumber
-set tabstop=4 softtabstop=4
+set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
+set autoindent
 set smartindent
 set cursorline
 set backspace=indent,eol,start
@@ -36,7 +37,7 @@ set hidden
 let g:netrw_banner = 0
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 let g:auto_save = 1
-colorscheme molokai
+colorscheme unokai
 
 "Mappings
 let mapleader = " "
