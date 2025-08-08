@@ -3,7 +3,6 @@ call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'github/copilot.vim'
-Plug 'wakatime/vim-wakatime'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'markonm/traces.vim'
 Plug 'tomasr/molokai'
