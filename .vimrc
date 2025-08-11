@@ -1,7 +1,6 @@
 "Plugins
 call plug#begin()
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'Donaldttt/fuzzyy'
 Plug 'github/copilot.vim'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'markonm/traces.vim'
@@ -35,23 +34,20 @@ set history=1000
 set autoread
 set hidden
 let g:netrw_banner = 0
+"Toggle with gh
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 let g:auto_save = 1
 colorscheme unokai
 
 "Mappings
 let mapleader = " "
-nnoremap <silent><Leader>e :Vex<CR>
-nnoremap <silent><Leader><CR> :so ~/.vimrc<CR>
-nnoremap <silent><Leader>ff :Files<CR>
-nnoremap <C-p> :GFiles<CR>
-nnoremap <C-q> :q<CR>
-inoremap <C-s> <Esc>:w<CR>
-vnoremap <C-Up> :m '<-2<CR>gv=gv
-vnoremap <C-Down> :m '>+<CR>gv=gv
-noremap <C-h> :set hlsearch!<CR>
-nnoremap <silent><Leader>tr :%s/\s\+$//<CR>
-map <silent><C-c> :w !xclip -sel c<CR><CR>
-vmap < <gv
-vmap > >gv
+nnoremap <silent><leader>e :Vex<cr>
+nnoremap <silent><leader>ff :FuzzyFiles<cr>
+nnoremap <silent><leader><cr> :so $MYVIMRC<cr>
+nnoremap <c-q> :q<cr>
+vnoremap <c-up> :m '<-2<cr>gv=gv
+vnoremap <c-down> :m '>+<cr>gv=gv
+nnoremap <silent><c-h> :set hlsearch!<cr>
+nnoremap <silent><leader>tr :%s/\s\+$//e<cr>
+xnoremap <silent><c-c> :w !xclip -sel c<cr><cr>
 
