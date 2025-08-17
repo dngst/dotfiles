@@ -14,6 +14,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set autocomplete
 set autoindent
 set smartindent
 set cursorline
@@ -33,6 +34,7 @@ set viminfo='100,<1000,s10,h
 set history=1000
 set autoread
 set hidden
+set clipboard=unnamedplus
 let g:netrw_banner = 0
 "Toggle with gh
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
@@ -49,5 +51,4 @@ vnoremap <c-up> :m '<-2<cr>gv=gv
 vnoremap <c-down> :m '>+<cr>gv=gv
 nnoremap <silent><c-h> :set hlsearch!<cr>
 nnoremap <silent><leader>tr :%s/\s\+$//e<cr>
-xnoremap <silent><c-c> :w !xclip -sel c<cr><cr>
 
