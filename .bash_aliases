@@ -7,8 +7,8 @@ alias afi='_ apt-fast -y install'
 alias lppa='ls /etc/apt/sources.list.d'
 
 # files & directories
-alias l='ls -lh'
-alias la='ls -lha'
+alias l='ls -lh --group-directories-first'
+alias la='ls -lha --group-directories-first'
 alias sml='ln -s'
 alias wrk='cd ~/workspace'
 alias t='touch'
