@@ -1,6 +1,5 @@
 "Plugins
 call plug#begin()
-Plug 'Donaldttt/fuzzyy'
 Plug 'github/copilot.vim'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'markonm/traces.vim'
@@ -44,7 +43,6 @@ colorscheme unokai
 "Mappings
 let mapleader = " "
 nnoremap <silent><leader>e :Vex<cr>
-nnoremap <silent><leader>ff :FuzzyFiles<cr>
 nnoremap <silent><leader><cr> :so $MYVIMRC<cr>
 nnoremap <c-q> :q<cr>
 vnoremap <c-up> :m '<-2<cr>gv=gv
