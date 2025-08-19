@@ -45,8 +45,6 @@ let mapleader = " "
 nnoremap <silent><leader>e :Vex<cr>
 nnoremap <silent><leader><cr> :so $MYVIMRC<cr>
 nnoremap <c-q> :q<cr>
-vnoremap <c-up> :m '<-2<cr>gv=gv
-vnoremap <c-down> :m '>+<cr>gv=gv
 nnoremap <silent><c-h> :set hlsearch!<cr>
 nnoremap <silent><leader>tr :%s/\s\+$//e<cr>
 
