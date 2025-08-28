@@ -41,7 +41,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # Set Vim as default editor
 echo "export EDITOR='/usr/local/bin/vim'" >> ~/.bashrc
 
-sudo apt-fast install xclip -y
+sudo apt-fast install xclip pulseaudio libnotify-bin -y
 
 mkdir ~/workspace
 
