@@ -1,2 +1,2 @@
-* * * * *  XDG_RUNTIME_DIR=/run/user/$(id -u) /home/$(whoami)/dotfiles/batlife
+* * * * * /home/$(whoami)/dotfiles/batlife
 @reboot ~/.dropbox-dist/dropboxd
