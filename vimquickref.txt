@@ -1,0 +1,25 @@
+:%s/old/new/g replace all in a file
+
+<c-o> run a single normal mode command
+
+<c-r> paste from a register
+
+<c-[> Escape
+
+* search for the word under the cursor
+
+. repeat last change
+
+% find matching ({[
+
+fFtT move to a character in the current line. (,;)
+
+[]s cycle spelling errors
+
+z= suggest spelling corrections
+
+S/cc change a whole line + insert
+
+:u0 undo all changes
+
+% range of the current file in command mode

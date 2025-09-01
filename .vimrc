@@ -47,4 +47,5 @@ nnoremap <silent><leader><cr> :so $MYVIMRC<cr>
 nnoremap <c-q> :q<cr>
 nnoremap <silent><c-h> :set hlsearch!<cr>
 nnoremap <silent><leader>tr :%s/\s\+$//e<cr>
+nnoremap <leader>qr :sp ~/dotfiles/vimquickref.txt<cr>
 
