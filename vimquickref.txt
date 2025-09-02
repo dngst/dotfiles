@@ -1,5 +1,9 @@
 :%s/old/new/g replace all in a file
 
+:bp/bn/bf/bl cycle buffers
+
+g; g, cycle change list
+
 <c-o> run a single normal mode command
 
 <c-r> paste from a register
