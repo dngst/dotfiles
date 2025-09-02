@@ -39,6 +39,7 @@ let g:netrw_banner = 0
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 let g:auto_save = 1
 colorscheme unokai
+set path+=**
 
 "Mappings
 let mapleader = " "
@@ -48,4 +49,4 @@ nnoremap <c-q> :q<cr>
 nnoremap <silent><c-h> :set hlsearch!<cr>
 nnoremap <silent><leader>tr :%s/\s\+$//e<cr>
 nnoremap <leader>qr :sp ~/dotfiles/vimquickref.txt<cr>
-
+nnoremap <leader>f :find 
