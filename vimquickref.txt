@@ -4,6 +4,12 @@
 
 g; g, cycle change list
 
+<c-o> <c-i> cycle jump list
+
+"_ black hole register for deletions
+
+m{char} `{char} set and jump to a mark
+
 <c-o> run a single normal mode command
 
 <c-r> paste from a register
