@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'github/copilot.vim'
 Plug '907th/vim-auto-save'
 Plug 'markonm/traces.vim'
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 "Settings
@@ -50,3 +51,5 @@ nnoremap <silent><c-h> :set hlsearch!<cr>
 nnoremap <silent><leader>tr :%s/\s\+$//e<cr>
 nnoremap <leader>qr :sp ~/dotfiles/vimquickref.txt<cr>
 nnoremap <leader>f :find 
+nnoremap Q <nop>
+nnoremap <f5> @:
