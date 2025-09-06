@@ -50,6 +50,7 @@ nnoremap <c-q> :q<cr>
 nnoremap <silent><c-h> :set hlsearch!<cr>
 nnoremap <silent><leader>tr :%s/\s\+$//e<cr>
 nnoremap <leader>qr :sp ~/dotfiles/vimquickref.txt<cr>
-nnoremap <leader>f :find 
+nnoremap <leader>f :find<space>
 nnoremap Q <nop>
 nnoremap <f5> @:
+noremap <leader>a :Ack!<space>
