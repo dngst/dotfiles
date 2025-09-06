@@ -2,6 +2,14 @@
 
 :bp/bn/bf/bl cycle buffers
 
+:cn/cp/cfir/cla cycle quickfix list
+
+:cope/ccl open or close quickfix list
+
+:cdo {cmd} Execute {cmd} on each line listed in the quickfix list
+
+:cfdo {cmd} Execute {cmd} once for each file listed in the quickfix list
+
 g; g, cycle change list
 
 <c-o> <c-i> cycle jump list
@@ -9,6 +17,8 @@ g; g, cycle change list
 "_ black hole register for unsaved deletions
 
 m{char} `{char} set and jump to a mark
+
+xp ddp transpose characters/lines
 
 <c-o> run a single normal mode command
 
@@ -18,7 +28,7 @@ m{char} `{char} set and jump to a mark
 
 * search for the word under the cursor
 
-. repeat last change
+. @: repeat last command
 
 % find matching ({[
 
@@ -33,3 +43,5 @@ S/cc change a whole line + insert
 :u0 undo all changes
 
 % range of the current file in command mode
+
++ system clipboard
