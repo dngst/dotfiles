@@ -25,10 +25,6 @@ sudo mv noti /usr/bin/noti
 # Install Dropbox
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
-# Clone dotfiles repo and create symlinks
-git clone https://github.com/dngst/dotfiles.git
-find ~/dotfiles -name ".*" -type f -exec ln -s {} ~ \;
-
 # Install Vim
 sudo apt build-dep -y vim
 git clone https://github.com/vim/vim.git
@@ -38,10 +34,16 @@ cd vim/src && ./configure --with-x --disable-gui && make && sudo make install
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+sudo apt-fast install xclip ack-grep libnotify-bin xfce4-terminal -y
+
+curl -fsS https://dl.brave.com/install.sh | sh
+
+# Clone dotfiles repo and create symlinks
+git clone https://github.com/dngst/dotfiles.git
+find ~/dotfiles -name ".*" -type f -exec ln -s {} ~ \;
+
 # Set Vim as default editor
 echo "export EDITOR='/usr/local/bin/vim'" >> ~/.bashrc
-
-sudo apt-fast install xclip ack-grep libnotify-bin -y
 
 mkdir ~/workspace
 
