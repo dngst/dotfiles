@@ -45,3 +45,5 @@ S/cc change a whole line + insert
 % range of the current file in command mode
 
 + system clipboard
+
+vim +<linenumber> <filename> open file at line number
