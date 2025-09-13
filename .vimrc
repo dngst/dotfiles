@@ -1,6 +1,5 @@
 "Plugins
 call plug#begin()
-Plug 'github/copilot.vim'
 Plug '907th/vim-auto-save'
 Plug 'markonm/traces.vim'
 Plug 'mileszs/ack.vim'
