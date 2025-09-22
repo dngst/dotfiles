@@ -1,14 +1,18 @@
 :%s/old/new/g replace all in a file
 
+<c-n> select first auto complete option
+
+gv restore previous visual selection
+
 :bp/bn/bf/bl cycle buffers
 
 :cn/cp/cfir/cla cycle quickfix list
 
 :cope/ccl open or close quickfix list
 
-:cdo {cmd} Execute {cmd} on each line listed in the quickfix list
+:cdo {cmd} execute {cmd} on each line listed in the quickfix list
 
-:cfdo {cmd} Execute {cmd} once for each file listed in the quickfix list
+:cfdo {cmd} execute {cmd} once for each file listed in the quickfix list
 
 g; g, cycle change list
 
