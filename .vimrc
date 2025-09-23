@@ -53,3 +53,7 @@ nnoremap <leader>f :find<space>
 nnoremap Q <nop>
 nnoremap <f5> @:
 noremap <leader>a :Ack!<space>
+nnoremap <left> <c-w>h
+nnoremap <down> <c-w>j
+nnoremap <up> <c-w>k
+nnoremap <right> <c-w>l
