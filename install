@@ -38,7 +38,7 @@ cd vim/src && ./configure --with-x --disable-gui && make && sudo make install
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-sudo apt-fast install xclip ack-grep -y
+sudo apt-fast install xclip ack-grep gvfs-backends redshift redshift-gtk bluez blueman -y
 
 curl -fsS https://dl.brave.com/install.sh | sh
 
@@ -48,6 +48,9 @@ echo "export EDITOR='/usr/local/bin/vim'" >> ~/.bashrc
 mkdir ~/workspace
 
 crontab ~/dotfiles/cronjobs.txt
+
+cp ~/dotfiles/redshift.conf ~/.config
+cp ~/dotfiles/xfce4-terminal.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml
 
 sudo -u postgres createuser --superuser $USER
 sudo -u postgres createdb $USER
