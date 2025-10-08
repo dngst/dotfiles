@@ -3,6 +3,7 @@ call plug#begin()
 Plug '907th/vim-auto-save'
 Plug 'markonm/traces.vim'
 Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 "Settings
