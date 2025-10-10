@@ -59,4 +59,4 @@ nnoremap <left> <c-w>h
 nnoremap <down> <c-w>j
 nnoremap <up> <c-w>k
 nnoremap <right> <c-w>l
-nnoremap <leader>s :%s
+nnoremap <leader>s :%s/
