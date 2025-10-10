@@ -40,6 +40,7 @@ let g:netrw_banner = 0
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 let g:auto_save = 1
 colorscheme unokai
+hi Normal ctermbg=NONE guibg=NONE
 set path+=**
 
 "Mappings
@@ -58,3 +59,4 @@ nnoremap <left> <c-w>h
 nnoremap <down> <c-w>j
 nnoremap <up> <c-w>k
 nnoremap <right> <c-w>l
+nnoremap <leader>s :%s
