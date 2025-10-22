@@ -49,6 +49,8 @@ mkdir ~/workspace
 
 crontab ~/dotfiles/cronjobs.txt
 
+sudo cp ~/dotfiles/CascadiaMono /usr/share/fonts
+
 cp ~/dotfiles/redshift.conf ~/.config
 cp ~/dotfiles/xfce4-terminal.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml
 
