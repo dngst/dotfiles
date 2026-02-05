@@ -77,3 +77,11 @@ alias gph='gp heroku main'
 alias hdm='heroku run rails db:migrate'
 alias hfboot='heroku labs:enable build-in-app-dir -a'
 alias hlogs='heroku logs'
+
+alias env='python3 -m venv venv && act'
+alias act='. venv/bin/activate'
+alias dea='deactivate'
+alias cact='conda activate'
+alias cdea='conda deactivate'
+alias pir='pip install -r requirements.txt'
+
