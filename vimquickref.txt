@@ -1,5 +1,7 @@
 :%s/old/new/g replace all in a file
 
+:e# go to previously opened file
+
 <c-n> select first auto complete option
 
 gv restore previous visual selection
