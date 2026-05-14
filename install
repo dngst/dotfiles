@@ -40,8 +40,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 sudo apt-fast install xclip ack-grep gvfs-backends redshift redshift-gtk -y
 
-curl -fsS https://dl.brave.com/install.sh | sh
-
 # Set Vim as default editor
 echo "export EDITOR='/usr/local/bin/vim'" >> ~/.bashrc
 
