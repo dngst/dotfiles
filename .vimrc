@@ -1,6 +1,5 @@
 "Plugins
 call plug#begin()
-Plug '907th/vim-auto-save'
 Plug 'markonm/traces.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
@@ -38,17 +37,22 @@ set clipboard=unnamedplus
 let g:netrw_banner = 0
 "Toggle with gh
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
-let g:auto_save = 1
 colorscheme unokai
 set path+=**
+set splitright
+set splitbelow
+"Auto save
+autocmd InsertLeave,TextChanged * if &modified && !&readonly | write | endif
 
 "Mappings
 let mapleader = " "
-nnoremap <silent><leader>e :Vex<cr>
+nnoremap <silent><leader>e :Lexplore<cr>
+"Toggle explore
 nnoremap <silent><leader><cr> :so $MYVIMRC<cr>
 nnoremap <c-q> :q<cr>
 nnoremap <silent><c-h> :set hlsearch!<cr>
-nnoremap <silent><leader>tr :%s/\s\+$//e<cr>
+"Remove trailing spaces
+autocmd BufWritePre * %s/\s\+$//e
 nnoremap <leader>qr :sp ~/dotfiles/vimquickref.txt<cr>
 nnoremap <leader>f :find<space>
 nnoremap Q <nop>
