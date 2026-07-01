@@ -39,15 +39,13 @@ let g:netrw_banner = 0
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 colorscheme unokai
 set path+=**
-set splitright
 set splitbelow
 "Auto save
 autocmd InsertLeave,TextChanged * if &modified && !&readonly | write | endif
 
 "Mappings
 let mapleader = " "
-nnoremap <silent><leader>e :Lexplore<cr>
-"Toggle explore
+nnoremap <silent><leader>e :Vex<cr>
 nnoremap <silent><leader><cr> :so $MYVIMRC<cr>
 nnoremap <c-q> :q<cr>
 nnoremap <silent><c-h> :set hlsearch!<cr>
