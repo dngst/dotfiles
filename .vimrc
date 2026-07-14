@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'markonm/traces.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
+Plug '907th/vim-auto-save'
 call plug#end()
 
 "Settings
@@ -38,16 +39,17 @@ let g:netrw_banner = 0
 "Toggle with gh
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 colorscheme unokai
+set foldenable
 set path+=**
 set splitbelow
-"Auto save
-autocmd InsertLeave,TextChanged * if &modified && !&readonly | write | endif
+let g:auto_save = 1  " enable AutoSave on Vim startup
 
 "Mappings
 let mapleader = " "
 nnoremap <silent><leader>e :Vex<cr>
 nnoremap <silent><leader><cr> :so $MYVIMRC<cr>
 nnoremap <c-q> :q<cr>
+nnoremap <c-s> :w<cr>
 nnoremap <silent><c-h> :set hlsearch!<cr>
 "Remove trailing spaces
 autocmd BufWritePre * %s/\s\+$//e
