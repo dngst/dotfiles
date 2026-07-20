@@ -4,8 +4,8 @@ battery=$(cat /sys/class/power_supply/BAT0/capacity)
 charger_plugged_in=$(cat /sys/class/power_supply/AC/online)
 sound_file=/usr/share/sounds/freedesktop/stereo/message-new-instant.oga
 
-if [ "$charger_plugged_in" -eq 1 ] && [ "$battery" -eq 100 ]; then
-    notify-send "Battery" "100% Charged"
+if [ "$charger_plugged_in" -eq 1 ] && [ "$battery" -eq 95 ]; then
+    notify-send "Battery" "95% Charged"
     paplay $sound_file
 elif [ "$charger_plugged_in" -eq 0 ] && [ "$battery" -lt 25 ]; then
     notify-send "Battery" "$battery% Remaining"
