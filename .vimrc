@@ -4,6 +4,8 @@ Plug 'markonm/traces.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
 Plug '907th/vim-auto-save'
+Plug 'ap/vim-css-color'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 call plug#end()
 
 "Settings
@@ -39,6 +41,7 @@ let g:netrw_banner = 0
 "Toggle with gh
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 colorscheme unokai
+" hi Normal ctermbg=NONE guibg=NONE
 set foldenable
 set path+=**
 set splitbelow
@@ -55,6 +58,7 @@ nnoremap <silent><c-h> :set hlsearch!<cr>
 autocmd BufWritePre * %s/\s\+$//e
 nnoremap <leader>qr :sp ~/dotfiles/vimquickref.txt<cr>
 nnoremap <leader>f :find<space>
+set wildignore+=*/tmp/*,*/log/*,*/vendor/*,*/public/*,*/node_modules/*,*/storage/*
 nnoremap Q <nop>
 nnoremap <f5> @:
 noremap <leader>a :Ack!<space>
