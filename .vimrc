@@ -40,7 +40,8 @@ set clipboard=unnamedplus
 let g:netrw_banner = 0
 "Toggle with gh
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
-colorscheme unokai
+" unokai sorbet
+colorscheme zaibatsu
 " hi Normal ctermbg=NONE guibg=NONE
 set foldenable
 set path+=**
