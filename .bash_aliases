@@ -86,3 +86,4 @@ alias cdea='conda deactivate'
 alias pir='pip install -r requirements.txt'
 
 alias ytd='yt-dlp --js-runtimes node -f "bestvideo[height<=1080]+bestaudio/best[height<=1080]"'
+alias dsh="npx @deepseek-ai/dsh web"
