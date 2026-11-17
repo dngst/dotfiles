@@ -43,6 +43,7 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 colorscheme unokai
 " hi Normal ctermbg=NONE guibg=NONE
 set foldenable
+set foldmethod=syntax
 set path+=**
 set splitbelow
 let g:auto_save = 1  " enable AutoSave on Vim startup
@@ -53,7 +54,7 @@ nnoremap <silent><leader>e :Vex<cr>
 nnoremap <silent><leader><cr> :so $MYVIMRC<cr>
 nnoremap <c-q> :q<cr>
 nnoremap <c-s> :w<cr>
-nnoremap <silent><c-h> :set hlsearch!<cr>
+nnoremap <silent> <Esc> :nohlsearch<CR>
 "Remove trailing spaces
 autocmd BufWritePre * %s/\s\+$//e
 nnoremap <leader>qr :sp ~/dotfiles/vimquickref.txt<cr>
@@ -67,3 +68,4 @@ nnoremap <down> <c-w>j
 nnoremap <up> <c-w>k
 nnoremap <right> <c-w>l
 nnoremap <leader>s :%s/
+nnoremap <leader>y :%y+<cr>
