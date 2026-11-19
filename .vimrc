@@ -44,6 +44,7 @@ colorscheme unokai
 " hi Normal ctermbg=NONE guibg=NONE
 set foldenable
 set foldmethod=syntax
+set foldlevel=99
 set path+=**
 set splitbelow
 let g:auto_save = 1  " enable AutoSave on Vim startup
