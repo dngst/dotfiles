@@ -6,7 +6,7 @@ sudo apt install curl -y
 /bin/bash -c "$(curl -sL https://git.io/vokNn)"
 
 # Install Git
-sudo apt-fast -y install git-all
+sudo apt-fast -y install git
 
 sudo apt-fast -y install build-essential rustc libssl-dev libyaml-dev zlib1g-dev libgmp-dev
 
@@ -21,6 +21,10 @@ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
 # Install noti
 curl -L $(curl -s https://api.github.com/repos/variadico/noti/releases/latest | awk '/browser_download_url/ { print $2 }' | grep 'linux-amd64' | sed 's/"//g') | tar -xz
 sudo mv noti /usr/bin/noti
+
+# Install yt-dlp
+curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o ~/.local/bin/yt-dlp
+chmod a+rx ~/.local/bin/yt-dlp  # Make executable
 
 # Install Dropbox
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
